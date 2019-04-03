@@ -1,0 +1,65 @@
+<div id="map"></div>
+
+
+
+
+<!-- <agm-map
+[latitude]="latitude"
+[longitude]="longitude"
+[zoom]="2"
+(mapClick)="addMarker($event.coords.lat, $event.coords.lng)"
+>
+<agm-marker
+  *ngFor="let marker of markers"
+  [latitude]="marker.lat"
+  [longitude]="marker.lng"
+  [opacity]="marker.alpha"
+  [markerDraggable]="true"
+  (markerClick)="selectMarker($event)"
+>
+</agm-marker>
+<agm-rectangle
+  [north]="max('lat')"
+  [east]="max('lng')"
+  [south]="min('lat')"
+  [west]="min('lng')"
+> 
+</agm-rectangle> 
+</agm-map> 
+<p *ngIf="selectedMarker">
+Lat: {{ selectedMarker.lat }} Lng: {{ selectedMarker.lng }}
+</p>
+<router-outlet></router-outlet>
+<agm-map 
+  [latitude]="lat"
+  [longitude]="lng"
+  [zoom]="zoom"
+  [disableDefaultUI]="false"
+  [zoomControl]="false"
+  (mapClick)="mapClicked($event)">
+
+  <agm-marker 
+      *ngFor="let m of markers; let i = index"
+      (markerClick)="clickedMarker(m.label, i)"
+      [latitude]="m.lat"
+      [longitude]="m.lng"
+      [label]="m.label"
+      [markerDraggable]="m.draggable"
+      (dragEnd)="markerDragEnd(m, $event)">
+      
+    <agm-info-window>
+      <strong>InfoWindow content</strong>
+    </agm-info-window>
+    
+  </agm-marker>
+  
+  <agm-circle [latitude]="lat + 0.3" [longitude]="lng" 
+      [radius]="5000"
+      [fillColor]="'red'"
+      [circleDraggable]="true"
+      [editable]="true"
+      
+      >
+  </agm-circle>
+
+</agm-map>-->
